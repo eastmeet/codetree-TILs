@@ -5,14 +5,12 @@ int main() {
     int a = 5;
     int b = 6;
     int c = 7;
-    int temp1;
-    int temp2;
+    int temp;
 
-    temp1 = b;
-    temp2 = c;
+    temp = b;
     b = a;
-    c = temp1;
-    a = temp2;
+    a = c;
+    c = temp;
     printf("%d\n", a);
     printf("%d\n", b);
     printf("%d\n", c);
