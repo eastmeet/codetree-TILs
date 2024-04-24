@@ -16,13 +16,14 @@ public class Main {
             } else if (ucLetter.equals("C")) {
                 System.out.println("Usually");
             } else if (ucLetter.equals("D")) {
-                System.out.println("Effor");
+                System.out.println("Effort");
             } else {
                 System.out.println("Failure");
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+
 
 
     }
