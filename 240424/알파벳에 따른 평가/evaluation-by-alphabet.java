@@ -8,7 +8,7 @@ public class Main {
             String ucLetter = sc.nextLine();
 
             if (ucLetter.equals("S")){
-                System.out.println("Superor");
+                System.out.println("Superior");
             } else if (ucLetter.equals("A")) {
                 System.out.println("Excellent");
             } else if (ucLetter.equals("B")) {
