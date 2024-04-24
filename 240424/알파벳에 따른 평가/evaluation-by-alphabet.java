@@ -20,6 +20,8 @@ public class Main {
             } else {
                 System.out.println("Failure");
             }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
 
 
