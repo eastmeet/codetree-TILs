@@ -6,7 +6,7 @@ public class Main {
         try (Scanner sc = new Scanner(System.in);){
             int n = sc.nextInt();
 
-            if (n < 100) {
+            if (n <= 100) {
 
                 for (int i = n; i <= 100; i++) {
                     System.out.print(i + " ");
