@@ -6,22 +6,25 @@ public class Main {
         try (Scanner sc = new Scanner(System.in);) {
             int month = sc.nextInt();
 
-            if (month < 1 && month > 12) {
+            if (month < 1 || month > 12) {
                 System.out.println("Error");
+                return;
             }
 
-            if (month <= 2) {
-                System.out.println("Winter");
+            String season = "";
+
+            if (month <= 2 || month == 12) {
+                season = "Winter";
             } else if (month <= 5) {
-                System.out.println("Spring");
+                season = "Spring";
             } else if (month <= 8) {
-                System.out.println("Summer");
+                season = "Summer";
             } else if (month <= 11) {
-                System.out.println("Fall");
-            } else {
-                System.out.println("Winter");
+                season = "Fall";
             }
               
+            System.out.println(season);  
+
         } catch (Exception e) {
             System.out.println("Error");
         }
