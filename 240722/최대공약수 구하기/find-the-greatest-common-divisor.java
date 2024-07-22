@@ -18,16 +18,19 @@ public class Main {
     }
 
     public static int find(int bigger, int smaller) {
-        int q = bigger % smaller;
+        int q = 1;
 
-        if (q == 0) {
-            return smaller;
-        }
-        
         while (bigger % smaller != 0) {
+            q = bigger % smaller;
+
+            if (q == 0) {
+                return smaller;
+            }
+
             bigger = smaller;
             smaller = q;
         }
+        
         return q;
     }
 }
