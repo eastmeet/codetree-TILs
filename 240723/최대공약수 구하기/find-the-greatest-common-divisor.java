@@ -8,29 +8,17 @@ public class Main {
         try (Scanner sc = new Scanner(System.in);) {
             int n = sc.nextInt();
             int m = sc.nextInt();
-            int result = (n > m) ? findGCD(n, m) : findGCD(m, n);
+            int result = findGCD(n, m);
             System.out.println(result);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }
 
-    public static int findGCD(int bigger, int smaller) {
-
-        if (bigger == smaller) {
-            return bigger;
+    public static int findGCD(int n, int m) {
+        if (m == 0) {
+            return n;
         }
-
-        int GCD = -1;
-        int i = 1;
-        while (i <= bigger) {
-            if ((smaller % i == 0) && (bigger % i == 0)) {
-                GCD = i;
-            }
-            i++;
-        }
-
-        return GCD;
-
+        return findGCD(m, n % m);
     }
 }
