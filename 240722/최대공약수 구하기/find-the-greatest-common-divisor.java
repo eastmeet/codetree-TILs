@@ -9,10 +9,8 @@ public class Main {
 
             // 최대 공약수
             // n 과 m 중의 누가 큰가?
-
-            int q = -1;
+            int q = m % n;
             while (m % n != 0) {
-                q = m % n;
                 m = n;
                 n = q;
             }
