@@ -21,6 +21,11 @@ public class Main {
 
         int mod = dividend % divisor;
         int q = dividend / divisor;
+        // 1 100
+
+        if (q == dividend) {
+            return 1;
+        }
 
         if (q == 0) {
             return 1;
