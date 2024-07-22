@@ -17,20 +17,23 @@ public class Main {
         }
     }
 
-    public static int find(int bigger, int smaller) {
-        int q = 1;
+    public static int find(int dividend, int divisor) {
 
-        while (bigger % smaller != 0) {
-            q = bigger % smaller;
+        int mod = dividend % divisor;
+        int q = dividend / divisor;
 
-            if (q == 0) {
-                return smaller;
-            }
-
-            bigger = smaller;
-            smaller = q;
+        if (q == 0) {
+            return 1;
         }
-        
-        return q;
+
+        if (mod == 0)  {
+            return dividend;
+        }
+
+        if (mod == 1) {
+            return divisor;
+        }
+
+        return mod;
     }
 }
