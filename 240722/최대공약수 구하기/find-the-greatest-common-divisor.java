@@ -19,6 +19,11 @@ public class Main {
 
     public static int find(int bigger, int smaller) {
         int q = bigger % smaller;
+
+        if (q == 0) {
+            return smaller;
+        }
+        
         while (bigger % smaller != 0) {
             bigger = smaller;
             smaller = q;
