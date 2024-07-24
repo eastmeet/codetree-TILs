@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,11 +12,14 @@ public class Main {
             }
 
             Arrays.sort(arr);
-            for (int i = 0; i < arr.length; i++) {
-                System.out.print(arr[i] + " ");
-            }
+            // 출력을 변경하기
+            // for (int i = 0; i < arr.length; i++) {
+                // System.out.print(arr[i] + " ");
+            // }
+            System.out.println(Arrays.stream(arr)
+                    .mapToObj(String::valueOf)
+                    .collect(Collectors.joining(" ")));
             
-            System.out.println();
             Integer[] arr1 = Arrays.stream(arr).boxed().toArray(Integer[]::new);
             Arrays.sort(arr1, Collections.reverseOrder());
               for (int i = 0; i < arr.length; i++) {
