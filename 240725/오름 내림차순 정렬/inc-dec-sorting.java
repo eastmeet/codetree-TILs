@@ -21,7 +21,7 @@ public class Main {
               for (int i = 0; i < arr.length; i++) {
                 System.out.print(arr1[i] + " ");
             }
-        } catch (Exceptio e) {
+        } catch (Exception e) {
             System.out.println(e.getMessage());
             throw e;
         }
