@@ -4,9 +4,10 @@ public class Main {
 
     public static boolean isCondition(int n) {
         // 십의자리
-        int x = n / 10;
-        int y = n - (10 * x);
-        return ((n % 2 == 0) && ((x + y) % 5 == 0));
+        int tensPlace = n / 10;
+        int onesPlace = n % 10;
+        int sum = tensPlace + onesPlace;
+        return ((n % 2 == 0) && (sum % 5 == 0));
     }
 
     public static void main(String[] args) {
