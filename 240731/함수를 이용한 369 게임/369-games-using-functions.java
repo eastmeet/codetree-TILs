@@ -25,23 +25,21 @@ public class Main {
     }
 
     public static boolean isThreeSixNine(int i) {
+        /* string solve 
         String str = String.valueOf(i);
         if (str.contains("3") || str.contains("6") || str.contains("9")) {
             return true;
         } else {
             return false;
         }
-        // 3, 6, 9 숫자가 하나 있는지 판별
-        // String으로 변환하기?
-        // 다른 수학적 지식 => 각자리를 검증해야한다.
-        // 반복문? 그럴려면 i가 몇자리의 수 인지 검증
-        // 일의자리 부터 시작
-        // int n = 10;
-        // while (i % n != i) {
-            // if (i % n == 3 || i % n == 6 || i % n == 9) {
-                // return true;
+        */
+        while (i > 0) {
+            if (i % 10 == 3 || i % 10 == 6 || i % 10 == 9)  {
+                return true;
             }
-            // n *= 10;
-        // }
-        
-    }
+
+            i /= 10;
+        }
+        return false;
+        }
+}
