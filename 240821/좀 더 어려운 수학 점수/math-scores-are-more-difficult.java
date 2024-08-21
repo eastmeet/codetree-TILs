@@ -22,7 +22,6 @@ public class Main {
            if (mathComparison != 0) {
                return mathComparison > 0 ? "A" : "B"; 
            }
-
-           return engA.compareTo(mathB) >= 0 ? "A" : "B";
+           return engA.compareTo(engB) >= 0 ? "A" : "B";
         }
 }
