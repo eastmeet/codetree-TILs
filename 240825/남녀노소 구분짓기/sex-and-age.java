@@ -22,6 +22,9 @@ public class Main {
             int age = sc.nextInt();
             String result = getResult(sex, age);
             System.out.println(result);
+        } catch(Exception e) {
+            System.out.println(e.getMessage());
+            throw e;
         }
     }
 
