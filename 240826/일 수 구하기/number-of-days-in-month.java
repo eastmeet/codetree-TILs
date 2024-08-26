@@ -24,7 +24,11 @@ public class Main {
        try (Scanner sc = new Scanner(System.in)) {
             int month = sc.nextInt();
             int result = callender.getOrDefault(month, -1);
-            System.out.println(result);
+            if (result != -1) {
+                System.out.println(result);
+            } else {
+                System.out.println("error");
+            }
        } catch (Exception e) {
             System.out.println(e.getMessage());
             throw e;
