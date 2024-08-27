@@ -5,12 +5,22 @@ public class Main {
         // 여기에 코드를 작성해주세요.
         // 중앙값 구하기
         try (Scanner sc = new Scanner(System.in)) {
-            int[] arr = new int[3];
-            arr[0] = sc.nextInt();
-            arr[1] = sc.nextInt();
-            arr[2] = sc.nextInt();
-            Arrays.sort(arr);
-            System.out.println(arr[1]);
+            int a = sc.nextInt();
+            int b = sc.nextInt();
+            int c = sc.nextInt();
+            int result = getMedian(a,b,c);
+            System.out.println(result);
         }
+    }
+
+    public static int getMedian(int a, int b, int c) {
+        if ((b >= a && a >= c) || (c >= a && a >= b)) {
+            return a;
+        } else if ((c >= b && b >= a) || (a >= b && b >= c)) {
+            return b;
+        } else {
+            return c;
+        }
+
     }
 }
