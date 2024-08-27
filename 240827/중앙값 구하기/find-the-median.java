@@ -1,4 +1,6 @@
 import java.util.*;
+import java.util.stream.IntStream;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -14,13 +16,18 @@ public class Main {
     }
 
     public static int getMedian(int a, int b, int c) {
-        if ((b >= a && a >= c) || (c >= a && a >= b)) {
-            return a;
-        } else if ((c >= b && b >= a) || (a >= b && b >= c)) {
-            return b;
-        } else {
-            return c;
-        }
+        // if ((b >= a && a >= c) || (c >= a && a >= b) ) {
+        //     return a;
+        // } else if ((c >= b && b >= a) || (a >= b && b >= c)) {
+        //     return b;
+        // } else {
+        //     return c;
+        // }
 
+        return IntStream.of(a, b, c)
+                .sorted()
+                .skip(1)
+                .findFirst()
+                .getAsInt();
     }
 }
