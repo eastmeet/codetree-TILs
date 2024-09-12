@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -6,19 +6,18 @@ public class Main {
         try (Scanner sc = new Scanner(System.in)) {
             int n = sc.nextInt();
             int m = sc.nextInt();
-            int [] result = swap(n, m);
-            System.out.print(result[0] + " " + result[1]);
-
+            int[] arr = {n, m};
+            swap(arr);
+            System.out.print(arr[0] + " " + arr[1]);
         } catch (Exception e) {
             System.out.println(e.getMessage());
             throw e;
         }
     }
 
-    private static int[] swap(Integer n, Integer m) {
-        int temp = n;
-        n = m;
-        m = temp;
-        return new int[]{n,m};
+    private static void swap(int[] arr) {
+        int temp = arr[0];
+        arr[0] = arr[1];
+        arr[1] = temp;
     }
 }
