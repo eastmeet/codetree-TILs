@@ -7,8 +7,9 @@ public class Main {
             int a = sc.nextInt();
             int b = sc.nextInt();
 
+            boolean isEven = (a % 2 == 0) ? true : false;
             while (a <= b) {
-                if (a % 2 == 0) {
+                if (isEven) {
                     System.out.print(a + " ");
                     a += 2;
                 } else {
