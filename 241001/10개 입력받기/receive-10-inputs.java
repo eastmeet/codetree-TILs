@@ -7,7 +7,7 @@ public class Main {
         // 여기에 코드를 작성해주세요.
         try (Scanner sc = new Scanner(System.in)) { 
             int[] arr = new int[10];
-            int cnt = 1;
+            int cnt = 0;
             for (int i = 0; i < arr.length; i++) {
                 arr[i] = sc.nextInt();
                 if (arr[i] == 0) {
@@ -16,7 +16,7 @@ public class Main {
                 cnt++;
             }
             int sum = Arrays.stream(arr).sum();
-            double avg = sum / cnt;
+            double avg = (double) sum / cnt;
             double roundedAvg = Math.round(avg * 10.0) / 10.0;
             System.out.print(sum + " " + roundedAvg);
         }
