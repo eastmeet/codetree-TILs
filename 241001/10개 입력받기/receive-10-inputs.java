@@ -19,7 +19,7 @@ public class Main {
                         .count();
             double avg = sum / cnt;
             double roundedAvg = Math.round(avg * 10.0) / 10.0;
-            System.out.print(sum + " " + avg);
+            System.out.print(sum + " " + roundedAvg);
         }
 
     }
