@@ -14,7 +14,7 @@ public class Main {
                 }
             }
             int sum = Arrays.stream(arr).sum();
-            long cnt = Arrays.stream(arr)
+            double cnt = Arrays.stream(arr)
                         .filter(num -> num != 0)
                         .count();
             double avg = sum / cnt;
