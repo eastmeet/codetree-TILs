@@ -6,24 +6,20 @@ public class Main {
         try (Scanner sc = new Scanner(System.in)) {
         
             int arr[] = new int[10];
-            int sum = 0;
-            int cnt = 0;
             for (int i = 0; i < 10; i++) {
                 arr[i] = sc.nextInt();
-
                 if (arr[i] == 0) {
                     break;
                 }
 
-                if (arr[i] % 2 == 0) {
-                    cnt++;
-                    sum += arr[i];
-                } 
-
             }
+            
+            int[] newArray = Arrays.stream(arr)
+                               .filter(num -> num != 0)
+                               .toArray();
+            long cnt = Arrays.stream(newArray).filter(num -> num % 2 == 0).count();
+            int sum = Arrays.stream(newArray).filter(num -> num % 2 == 0).sum();
             System.out.println(cnt + " " + sum);
         }
-
-
     }
 }
