@@ -13,9 +13,8 @@ public class Main {
             .filter(n -> n % 2 == 0)
             .summaryStatistics();
 
-        DoubleSummaryStatistics multipleOfThreeStats = Arrays.stream(arr)
+        IntSummaryStatistics multipleOfThreeStats = Arrays.stream(arr)
             .filter(n -> n % 3 == 0)
-            .mapToDouble(n -> n)
             .summaryStatistics();
 
         long evneSum = evenStats.getSum();
