@@ -9,16 +9,18 @@ public class Main {
                 .map(i -> sc.nextInt())
                 .toArray();
 
-        IntSummaryStatistics evenStats = Arrays.stream(arr)
-            .filter(n -> n % 2 == 0)
-            .summaryStatistics();
+        IntSummaryStatistics evenStats = IntStream.range(0, arr.length)
+                .filter(i -> i % 2 == 1)
+                .map(i -> arr[i])
+                .summaryStatistics();
 
-        IntSummaryStatistics multipleOfThreeStats = Arrays.stream(arr)
-            .filter(n -> n % 3 == 0)
-            .summaryStatistics();
+        IntSummaryStatistics multipleOfThreeStats = IntStream.range(0, arr.length)
+                .filter(i -> (i + 1) % 3 == 0)
+                .map(i -> arr[i])
+                .summaryStatistics();
 
-        long evneSum = evenStats.getSum();
-        double sum = multipleOfThreeStats.getAverage();
-        System.out.println(evneSum + " " + sum);
+        long sum = evenStats.getSum();
+        double avg = multipleOfThreeStats.getAverage();
+        System.out.println(sum + " " + String.format("%.1f", avg));
     }
 }
