@@ -9,7 +9,7 @@ public class Main {
 
         if (str1.length() == str2.length()) {
             System.out.println("same");
-        } else if (str1.length() > str1.length()) {
+        } else if (str1.length() > str2.length()) {
             System.out.println(str1 + " " + str1.length());
         } else {
             System.out.println(str2 + " " + str2.length());           
