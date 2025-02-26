@@ -4,12 +4,8 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String input = sc.next();
         // Please write your code here.
-        String[] strArr = input.split("");
-        String result = "";
-        for (int i = strArr.length - 1; i >= 0; i--) {
-             result += strArr[i];
-        }
-
+        StringBuilder sb = new StringBuilder(input);
+        String result = sb.reverse().toString();
         System.out.println(input.equals(result) ? "Yes" : "No");
     }
 }
